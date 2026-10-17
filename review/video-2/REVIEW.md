@@ -1,12 +1,21 @@
 # Video 2 · Class pins "Unsa'y section ninyo?" · build + review
 
 **Renders (placeholder voice, for timing only):**
-- `video-2-clean.mp4` — voice + sound effects, no music. The version to post once the real voice is in.
+- `video-2-clean.mp4` — voice + sound effects, no music (−14 LUFS). The version to post once the real voice is in.
 - `video-2-demo.mp4` — same plus music (soundsurfer-playful), ducked under the voice, fading out over the last second. For showing only, never for posting.
 
 24.33 s · 1080×1920 · 30 fps. Voice: ElevenLabs premade "Liam", eleven_multilingual_v2, **placeholder** — a student records the real voice from `video-2-recording.txt`, then `/video-voice`.
 
 Storyboard stills (approved) are in this folder; build stills, contact sheets and before/after sheets are in `build/`.
+
+## Round 3: review fixes
+1. **End card:** logo (900 px) and stick2it.me (128 px type) are bigger and the whole block is centred in the frame (logo 470 → disclaimer ~1440), like Video 1. The URL sticker stays inside the safe area even at the end of the push-in (66–934 px).
+2. **Scene 7:** "dayon" is now inside the sticker: one two-line sticker "dayon pick up / sa campus!" slaps on "dayon".
+3. **Scene 2:** the big pin lands right at the cut, so the scene never opens on the headline alone.
+4. **Scene 6:** the ₱30 sticker is bigger (520 px) and sits beside the "Buy 5, get 1 free" sticker across the top; the six pins sit below in two rows.
+5. **Scene 4:** the uploaded photo now *becomes* the pin: on "diretso … pin" it flies along the arrow, shrinks into place, and the photo pin (`pin-photo.svg`, rim and shine) snaps shut there, bigger (500 px), with the pin-snap sound.
+6. **Audio:** both renders are normalized to **−14 LUFS** with true peaks under −1 dBFS (clean −13.9 LUFS / −1.4 dBFS, demo −13.9 LUFS / −1.1 dBFS). The voice/effects/music balance underneath is unchanged, so the voice stays on top. This is now built into `tools/render.py` (`--lufs=` to change it).
+Contact sheet before/after this round: `build/review-before-round3.png` → `build/review-after.png`.
 
 ## Round 2: students upload their own image
 Students don't design pins on the website: they upload their own image and it's printed on the pin. So:
