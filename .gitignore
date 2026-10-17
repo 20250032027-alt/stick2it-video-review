@@ -1,0 +1,11 @@
+# Only the review/ folder is published.
+/*
+!/review/
+!/.gitignore
+
+# Never commit voice files, env files or keys.
+voice/
+.env
+*.env
+.env.*
+*.key
