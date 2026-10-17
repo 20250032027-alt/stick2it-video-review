@@ -4,17 +4,24 @@
 - `video-2-clean.mp4` — voice + sound effects, no music. The version to post once the real voice is in.
 - `video-2-demo.mp4` — same plus music (soundsurfer-playful), ducked under the voice, fading out over the last second. For showing only, never for posting.
 
-24.17 s · 1080×1920 · 30 fps. Voice: ElevenLabs premade "Liam", eleven_multilingual_v2, **placeholder** — a student records the real voice from `video-2-recording.txt`, then `/video-voice`.
+24.33 s · 1080×1920 · 30 fps. Voice: ElevenLabs premade "Liam", eleven_multilingual_v2, **placeholder** — a student records the real voice from `video-2-recording.txt`, then `/video-voice`.
 
 Storyboard stills (approved) are in this folder; build stills, contact sheets and before/after sheets are in `build/`.
 
-## Approved changes applied
+## Round 2: students upload their own image
+Students don't design pins on the website: they upload their own image and it's printed on the pin. So:
+- **Scene 4** no longer offers colours ("Pili og kolor: blue, gold, o red" is gone). New line: **"I-upload ra ang inyong design, diretso na sa pin!"** (Taglish: "I-upload lang ang design niyo, diretso na sa pin!"). On screen: the student's picture drops in on "I-upload", a gold arrow draws, "diretso na sa pin!" slaps, and the same picture **presses onto a pin** on "pin" (`print-photo` → `pin-photo`).
+- **Scene 6**: the free 6th pin is now the same blue design as the other five (still with the red "FREE!" tag and sparkle), so nothing suggests a colour choice.
+- Script, recording sheet and storyboard updated to match. Only line 4 of the placeholder voice was regenerated.
+- New cuts: 0–2.70 · 2.70–5.37 · 5.37–7.90 · 7.90–11.37 · 11.37–13.47 · 13.47–16.93 · 16.93–19.87 · 19.87–24.33. Whooshes: none over a word.
+
+## Approved changes applied (round 1)
 1. Scene 6 voice: "Trenta pesos ra matag pin, buy 5, get 1 free!" (the ₱30 sticker stays as the price tag).
 2. Scene 7 voice and screen: "Order online, dayon pick up sa campus."
 3. Scene 8 voice and screen: "Stick2It dot me, para sa mga XU CDO students!"
 4. Scene 6: the pins are now big (270 px, two rows of three: 5 blue + 1 gold) with a red "FREE!" tag on the gold one; the 5 blue pins land on "pin … buy 5", the gold one and the tag on "free" with a ding.
 
-## Timing
+## Timing (round 1; see round 2 for current cuts)
 Cuts: 0–2.70 · 2.70–5.37 · 5.37–7.90 · 7.90–11.17 · 11.17–13.30 · 13.30–16.73 · 16.73–19.70 · 19.70–24.17.
 Scenes 1–7 are all 2–4 s. The end card runs 4.47 s so stick2it.me stays up 3.8 s after "dot" (minimum 2.5 s).
 Hook "Unsa'y section ninyo?" is fully spoken by ~1.0 s and on screen from frame 0.
@@ -27,7 +34,7 @@ Procedural (numpy, `tools/sfx.py`): pops on slaps, a pin snap when the pin press
 Technical: nothing cut off, nothing duplicated by mistake, main content inside the safe area, on-screen text matches the voice, no real names (all pins, IDs and the pass use blanks).
 
 5 weakest things after pass 1 (`build/review-before.png`, a frame every 0.5 s):
-1. Scene 4 sat on the headline alone for ~1.2 s before "blue". **Fixed:** the three pins land on "Pili / og / kolor", then each bounces as its colour tag pops on its word.
+1. Scene 4 sat on the headline alone for ~1.2 s before "blue". **Fixed** at the time; scene 4 was later replaced (round 2).
 2. Scene 6 showed only the ₱30 sticker for ~1.5 s. **Fixed:** the first pin lands on "pin", the other four on "buy 5" (now ~1 s).
 3. Scene 7 opened on an empty printer slot. **Fixed:** the pass prints from the cut.
 4. Scene 2 opens on just the headline for ~0.5 s before the pin lands on "design". Not fixed (short).
@@ -35,5 +42,5 @@ Technical: nothing cut off, nothing duplicated by mistake, main content inside t
 After: `build/review-after.png`.
 
 ## What's left
-- Real voice: a Bisaya-speaking student checks scene 4 ("Pili og kolor") and scene 5 ("pareha tanan"), records `voice/video-2-real.mp3`, then `/video-voice`.
+- Real voice: a Bisaya-speaking student checks scene 4 ("I-upload ra ang inyong design, diretso na sa pin!") and scene 5 ("pareha tanan"), records `voice/video-2-real.mp3`, then `/video-voice`.
 - The placeholder voice is an English voice reading Bisaya, so some words sound off; it is only for timing.
