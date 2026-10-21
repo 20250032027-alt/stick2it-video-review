@@ -67,3 +67,20 @@ Both MP4s re-rendered: 20.93 s, -16 LUFS, true peak about -4 dBFS, voice at leas
 - Scene 6 pickup pass: `assets/scenes/pickup-pass.svg` (Your Name, Grade __ - Section).
 - Same voice, same timing, same positions. Re-rendered `video-1-final-clean.mp4` and `video-1-final-demo.mp4` (20.93 s each).
 - Current stills: `real-voice/scene-01…07.png`, `contact.png`, `contact-guides.png`.
+
+## Round 6: new real voice (v2)
+- New recording `video-1-real-v2.mp3`: one full take, clean, no stumbles, so no line swaps. Pauses trimmed to natural beats (0.15–0.33 s; 0.74 s kept after the hook so scene 1 reaches 2 s). 80 Hz high-pass, light denoise, gentle compression, -16 LUFS. 21.44 s raw → 21.09 s.
+- Whisper heard the script word for word ("sticktoit dot me" = **stick2it.me**, always written that way on screen). Script: `script-v2.md`.
+  1. Taga-XU CDO ka? 2. Grade school, JHS, o SHS — pwede ka mo-order! 3. Imong own pictures, himoon natong stickers… 4. …apil pud ang pins, keychains, posters, ug prints. 5. Order lang online sa stick2it.me… 6. …dayon pick up nalang sa campus. 7. Gikan sa students, para sa students. Stick2it.me!
+- Cuts: 0–2.00 · 2.00–6.00 · 6.00–8.93 · 8.93–12.63 · 12.63–15.13 · 15.13–17.17 · 17.17–21.10 (all 2–4 s). Hook spoken by 1.24 s, on screen from frame 0; CDO slaps on "CDO" (0.62 s).
+- Text changes: scene 2 "Pwede ka mo-order!" (was "Tanan pwede mo-order!"), heading "Grade school, JHS, o SHS —". Scene 6 cues follow "nalang" as one word.
+- End card: stick2it.me sticker lands on "para" so it is on screen 2.5 s; its corner peels on "Stick2it".
+
+**Audio:** clean and demo both -13.9 LUFS, true peak -2.2 / -1.9 dBFS. Voice at least 11.4 dB over the effects and at least 15.1 dB over the ducked music on every word (median 27.8 dB). All six whooshes sit inside pauses.
+
+**5 weakest things**
+1. Every cut opened on an empty background for 1–3 frames (headline faded in from nothing). **Fixed**: entrances that start on a cut begin 0.15 s early while the scene is hidden. See `real-voice-v2/cuts-before-after.png` (top before, bottom after).
+2. Frame 0 was blank (also in the old final and in Video 2), and "Taga-XU" punched in from 118% past the safe area. **Fixed**: frames are sampled 1 ms in; punch from 105%.
+3. Scene 6 → 7 cut landed one frame late (cut time rounding). **Fixed** by the same 1 ms change.
+4. End-card stick2it.me sticker and scene 4 "posters/prints" tags crossed the safe area once the slow zoom finished. **Fixed**: sticker 118 px and moved left; tags up 45 px.
+5. Scene 2's gold underline under "Pwede ka mo-order!" sits ~35 px under the safe line at the end of the zoom. Not changed (decoration only).
